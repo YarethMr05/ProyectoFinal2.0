@@ -16,5 +16,10 @@ namespace ProyectoFinal2._0
         {
             InitializeComponent();
         }
+
+        private void panelContenedorProductosProsadores_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
