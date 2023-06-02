@@ -103,6 +103,26 @@ namespace ProyectoFinal2._0.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menos_linea_recta_horizontal__1_ {
+            get {
+                object obj = ResourceManager.GetObject("menos-linea-recta-horizontal (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menos_linea_recta_horizontal__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("menos-linea-recta-horizontal (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minus {
             get {
                 object obj = ResourceManager.GetObject("minus", resourceCulture);
@@ -116,6 +136,16 @@ namespace ProyectoFinal2._0.Properties {
         internal static System.Drawing.Bitmap padlock {
             get {
                 object obj = ResourceManager.GetObject("padlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paisaje_montana_purpura {
+            get {
+                object obj = ResourceManager.GetObject("paisaje-montana-purpura", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
