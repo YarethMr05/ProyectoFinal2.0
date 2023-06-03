@@ -12,26 +12,27 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal2._0
 {
-    public partial class LoginFx : Form
+    public partial class RegistroFx : Form
     {
+        LoginFx loginForm = new LoginFx();
+
         private int borderRadius = 30;
         private int bordeSize = 2;
         private Color borderColor = Color.White;
 
-
-
-        public LoginFx()
+        public RegistroFx()
         {
             InitializeComponent();
             this.Padding = new Padding(bordeSize);
             this.BackColor = borderColor;
-        }
 
+        }
         //Drag Form     
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -39,12 +40,13 @@ namespace ProyectoFinal2._0
 
         }
 
-        private void LoginFx_MouseDown(object sender, MouseEventArgs e)
+        private void RegistroFx_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
-        private void panelContenedorLogin_MouseDown(object sender, MouseEventArgs e)
+        private void panelContenedorRegistroFx_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -167,99 +169,122 @@ namespace ProyectoFinal2._0
 
         }
 
-        private void LoginFx_Paint(object sender, PaintEventArgs e)
-        {
-            FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, bordeSize);
-        }
-        private void panelContenedorLogin_Paint(object sender, PaintEventArgs e)
-        {
-            ControlRegionAndBorder(panelContenedorLogin, borderRadius - (bordeSize / 2), e.Graphics, borderColor);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void RegistroFx_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, bordeSize);
         }
 
-        private void LoginFx_ResizeEnd(object sender, EventArgs e)
+
+
+        private void panelContenedorRegistroFx_Paint(object sender, PaintEventArgs e)
+        {
+            ControlRegionAndBorder(panelContenedorRegistroFx, borderRadius - (bordeSize / 2), e.Graphics, borderColor);
+        }
+
+        private void RegistroFx_ResizeEnd(object sender, EventArgs e)
         {
             this.Invalidate();
         }
 
-        private void LoginFx_SizeChanged(object sender, EventArgs e)
+        private void RegistroFx_SizeChanged(object sender, EventArgs e)
         {
             this.Invalidate();
         }
 
-        private void LoginFx_Activated(object sender, EventArgs e)
+        private void RegistroFx_Activated(object sender, EventArgs e)
         {
             this.Invalidate();
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnCerrarLogin_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-            APP abrirFormPrincipal = new APP();
-            abrirFormPrincipal.Show();
 
         }
 
-        private void txtUsuario_Enter(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO")
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            loginForm.Show();
+            this.Close();
+        }
+
+        private void txtUsuarioRegistro_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuarioRegistro.Text == "NOMBRE DE USUARIO")
             {
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.LightGray;
+                txtUsuarioRegistro.Text = "";
+                txtUsuarioRegistro.ForeColor = Color.LightGray;
             }
         }
 
-        private void txtUsuario_Leave(object sender, EventArgs e)
+        private void txtUsuarioRegistro_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "")
+            if (txtUsuarioRegistro.Text == "")
             {
-                txtUsuario.Text = "USUARIO";
-                txtUsuario.ForeColor = Color.DimGray;
+                txtUsuarioRegistro.Text = "NOMBRE DE USUARIO";
+                txtUsuarioRegistro.ForeColor = Color.DimGray;
             }
         }
 
-        private void txtContraseña_Enter(object sender, EventArgs e)
+        private void txtCorreoRegistro_Enter(object sender, EventArgs e)
         {
-            if (txtContraseña.Text == "CONTRASEÑA")
+            if (txtCorreoRegistro.Text == "CORREO")
             {
-                txtContraseña.Text = "";
-                txtContraseña.ForeColor = Color.LightGray;
-                txtContraseña.UseSystemPasswordChar = true;
+                txtCorreoRegistro.Text = "";
+                txtCorreoRegistro.ForeColor = Color.LightGray;
             }
         }
 
-        private void txtContraseña_Leave(object sender, EventArgs e)
+        private void txtCorreoRegistro_Leave(object sender, EventArgs e)
         {
-            if (txtContraseña.Text == "")
+            if (txtCorreoRegistro.Text == "")
             {
-                txtContraseña.Text = "CONTRASEÑA";
-                txtContraseña.ForeColor = Color.DimGray;
-                txtContraseña.UseSystemPasswordChar = false;
+                txtCorreoRegistro.Text = "CORREO";
+                txtCorreoRegistro.ForeColor = Color.DimGray;
             }
-
         }
 
-        private void btnRegistrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void txtContraseñaRegistro_Enter(object sender, EventArgs e)
         {
-            RegistroFx AbrirRegistro = new RegistroFx();
-            AbrirRegistro.Show();
-            this.Hide();
+            if (txtContraseñaRegistro.Text == "CONTRASEÑA")
+            {
+                txtContraseñaRegistro.Text = "";
+                txtContraseñaRegistro.ForeColor = Color.LightGray;
+                txtContraseñaRegistro.UseSystemPasswordChar = true;
+            }
+        }
 
+        private void txtContraseñaRegistro_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseñaRegistro.Text == "")
+            {
+                txtContraseñaRegistro.Text = "CONTRASEÑA";
+                txtContraseñaRegistro.ForeColor = Color.DimGray;
+                txtContraseñaRegistro.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txtConfirmarContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtConfirmarContraseña.Text == "CONFIRMAR CONTRASEÑA")
+            {
+                txtConfirmarContraseña.Text = "";
+               txtConfirmarContraseña.ForeColor = Color.LightGray;
+                txtConfirmarContraseña.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtConfirmarContraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtConfirmarContraseña.Text == "")
+            {
+                txtConfirmarContraseña.Text = "CONFIRMAR CONTRASEÑA";
+                txtConfirmarContraseña.ForeColor = Color.DimGray;
+                txtConfirmarContraseña.UseSystemPasswordChar = false;
+            }
         }
     }
 }

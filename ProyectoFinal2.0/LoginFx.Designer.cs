@@ -30,7 +30,7 @@
         {
             panelContenedorLogin = new Panel();
             panel1 = new Panel();
-            linkLabel1 = new LinkLabel();
+            btnRegistrar = new LinkLabel();
             btnLogin = new Button();
             txtContraseña = new TextBox();
             pictureBox5 = new PictureBox();
@@ -67,7 +67,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(linkLabel1);
+            panel1.Controls.Add(btnRegistrar);
             panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(txtContraseña);
             panel1.Controls.Add(pictureBox5);
@@ -88,17 +88,18 @@
             panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
             // 
-            // linkLabel1
+            // btnRegistrar
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe UI Emoji", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel1.LinkColor = Color.FromArgb(123, 41, 210);
-            linkLabel1.Location = new Point(94, 376);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(103, 19);
-            linkLabel1.TabIndex = 22;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Create Account";
+            btnRegistrar.AutoSize = true;
+            btnRegistrar.Font = new Font("Segoe UI Emoji", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegistrar.LinkColor = Color.FromArgb(123, 41, 210);
+            btnRegistrar.Location = new Point(94, 376);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(103, 19);
+            btnRegistrar.TabIndex = 22;
+            btnRegistrar.TabStop = true;
+            btnRegistrar.Text = "Create Account";
+            btnRegistrar.LinkClicked += btnRegistrar_LinkClicked;
             // 
             // btnLogin
             // 
@@ -126,6 +127,8 @@
             txtContraseña.Size = new Size(222, 19);
             txtContraseña.TabIndex = 18;
             txtContraseña.Text = "CONTRASEÑA";
+            txtContraseña.Enter += txtContraseña_Enter;
+            txtContraseña.Leave += txtContraseña_Leave;
             // 
             // pictureBox5
             // 
@@ -178,6 +181,8 @@
             txtUsuario.Size = new Size(222, 19);
             txtUsuario.TabIndex = 17;
             txtUsuario.Text = "USUARIO";
+            txtUsuario.Enter += txtUsuario_Enter;
+            txtUsuario.Leave += txtUsuario_Leave;
             // 
             // label3
             // 
@@ -274,6 +279,6 @@
         private Button btnLogin;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private LinkLabel linkLabel1;
+        private LinkLabel btnRegistrar;
     }
 }

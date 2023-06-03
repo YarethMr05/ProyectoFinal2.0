@@ -63,6 +63,16 @@ namespace ProyectoFinal2._0.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7534314_3665792 {
+            get {
+                object obj = ResourceManager.GetObject("7534314_3665792", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap acceso {
             get {
                 object obj = ResourceManager.GetObject("acceso", resourceCulture);
@@ -96,6 +106,16 @@ namespace ProyectoFinal2._0.Properties {
         internal static System.Drawing.Bitmap anadir_al_carrito__2_ {
             get {
                 object obj = ResourceManager.GetObject("anadir-al-carrito (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap correo {
+            get {
+                object obj = ResourceManager.GetObject("correo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
