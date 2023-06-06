@@ -210,7 +210,7 @@ namespace ProyectoFinal2._0
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            APP abrirFormPrincipal = new APP();
+            APPFx abrirFormPrincipal = new APPFx();
             abrirFormPrincipal.Show();
 
         }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal2._0
 {
-    public partial class APP : MaterialSkin.Controls.MaterialForm
+    public partial class FxProcesadores : UserControl
     {
-        public APP()
+        public FxProcesadores()
         {
             InitializeComponent();
-        }
-
-        private void panelContenedorProductosProsadores_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
